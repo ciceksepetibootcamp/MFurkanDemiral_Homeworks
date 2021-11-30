@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "bf16f6b9-1d7c-405a-92e5-880c3e2e9790",
+		"name": "ciceksepeti.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PageLoad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.success).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": \"2021-11-30T11:04:53.298Z\",\r\n    \"context\": {\r\n        \"page\": {\r\n            \"path\": \"/\",\r\n            \"referrer\": \"https://www.google.com/\",\r\n            \"search\": \"\",\r\n            \"title\": \"ÇiçekSepeti - Online Çiçek & Hediye Sitesi\",\r\n            \"url\": \"https://www.ciceksepeti.com/\"\r\n        },\r\n        \"userAgent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36\",\r\n        \"locale\": \"tr-TR\",\r\n        \"library\": {\r\n            \"name\": \"analytics.js\",\r\n            \"version\": \"4.1.8\"\r\n        }\r\n    },\r\n    \"integrations\": {},\r\n    \"properties\": {\r\n        \"path\": \"/\",\r\n        \"referrer\": \"https://www.google.com/\",\r\n        \"search\": \"\",\r\n        \"title\": \"ÇiçekSepeti - Online Çiçek & Hediye Sitesi\",\r\n        \"url\": \"https://www.ciceksepeti.com/\"\r\n    },\r\n    \"messageId\": \"ajs-ed8fa79c3292aac820455c7828000bd7\",\r\n    \"anonymousId\": \"9db846df-6627-4938-bdc2-b2149663312c\",\r\n    \"type\": \"page\",\r\n    \"writeKey\": \"Ejaik9iJwVBCWODcHce7alEYOwFPRbMr\",\r\n    \"userId\": null,\r\n    \"sentAt\": \"2021-11-30T11:04:53.302Z\",\r\n    \"_metadata\": {\r\n        \"bundled\": [\r\n            \"Appboy\",\r\n            \"Segment.io\"\r\n        ],\r\n        \"unbundled\": [\r\n            \"Amplitude\"\r\n        ],\r\n        \"bundledIds\": [\r\n            \"607969ffd273fe4936d63d64\"\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.data.ciceksepeti.com/v1/p",
+					"protocol": "https",
+					"host": [
+						"api",
+						"data",
+						"ciceksepeti",
+						"com"
+					],
+					"path": [
+						"v1",
+						"p"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DataOptions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "https://sdk.iad-06.braze.com/api/v3/data/",
+					"protocol": "https",
+					"host": [
+						"sdk",
+						"iad-06",
+						"braze",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DataPost",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"respond_with\": {\r\n        \"triggers\": true,\r\n        \"config\": {\r\n            \"config_time\": 0\r\n        }\r\n    },\r\n    \"events\": [\r\n        {\r\n            \"name\": \"ss\",\r\n            \"time\": 1638270293.577,\r\n            \"data\": {},\r\n            \"session_id\": \"42f9ec5c-bd88-5051-ad89-20a51bde4e17\"\r\n        }\r\n    ],\r\n    \"device\": {\r\n        \"browser\": \"Chrome\",\r\n        \"browser_version\": \"96\",\r\n        \"os_version\": \"Windows\",\r\n        \"resolution\": \"1536x864\",\r\n        \"locale\": \"tr-tr\",\r\n        \"time_zone\": \"Europe/Istanbul\",\r\n        \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36\"\r\n    },\r\n    \"api_key\": \"7d69a5ff-39ce-459d-a890-6f3916d91ec1\",\r\n    \"time\": 1638270293,\r\n    \"sdk_version\": \"2.7.1\",\r\n    \"device_id\": \"87780e62-04df-c330-9e56-223b414b91b7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sdk.iad-06.braze.com/api/v3/data/",
+					"protocol": "https",
+					"host": [
+						"sdk",
+						"iad-06",
+						"braze",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pixel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"event\": \"Browse\",\r\n    \"event_id\": \"eventId-1638270765337-9045214863822-C1O13KHLRI5O97LI2SM0\",\r\n    \"is_onsite\": false,\r\n    \"timestamp\": \"2021-11-30T11:12:45.337Z\",\r\n    \"context\": {\r\n        \"ad\": {},\r\n        \"user\": {},\r\n        \"pixel\": {\r\n            \"code\": \"C1O13KHLRI5O97LI2SM0\"\r\n        },\r\n        \"page\": {\r\n            \"url\": \"https://www.ciceksepeti.com/Arama?query=%C3%A7i%C3%A7ek&qt=%C3%A7i%C3%A7ek\",\r\n            \"referrer\": \"https://www.ciceksepeti.com/\"\r\n        },\r\n        \"library\": {\r\n            \"name\": \"pixel.js\",\r\n            \"version\": \"2.1.33\"\r\n        },\r\n        \"device\": {\r\n            \"platform\": \"pc\"\r\n        },\r\n        \"session_id\": \"sessionId-1638270292400-2381074895160-C1O13KHLRI5O97LI2SM0\",\r\n        \"pageview_id\": \"pageId-1638270764978-6073636925934-C1O13KHLRI5O97LI2SM0\",\r\n        \"variation_id\": \"control\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://analytics.tiktok.com/api/v2/pixel",
+					"protocol": "https",
+					"host": [
+						"analytics",
+						"tiktok",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pixel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"JSON data is true\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.eql(\"true\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ApiKey\": \"ANI-AB549AA1\",\r\n    \"Identifier\": \"80e005fa-9890-4e6b-a9d1-ceeefb354cf1\",\r\n    \"EventName\": \"ProductViewEvent\",\r\n    \"ProductCode\": \"at3710-1\",\r\n    \"Stock\": 9999,\r\n    \"CustomerIdentifier\": \"\",\r\n    \"CountryId\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etwoikg3z4.execute-api.eu-west-1.amazonaws.com/ProdAni/event",
+					"protocol": "https",
+					"host": [
+						"etwoikg3z4",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"ProdAni",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isNotUserLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.success).to.eql(true);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": \"2021-11-30T11:20:22.204Z\",\r\n    \"context\": {\r\n        \"page\": {\r\n            \"path\": \"/uye-girisi\",\r\n            \"referrer\": \"https://www.ciceksepeti.com/dogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\",\r\n            \"search\": \"?returnUrl=%2Fdogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\",\r\n            \"title\": \"Cicek Siparisi, Online Cicek Gonder , CicekSepeti.com\",\r\n            \"url\": \"https://www.ciceksepeti.com/uye-girisi?returnUrl=%2Fdogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\"\r\n        },\r\n        \"userAgent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36\",\r\n        \"locale\": \"tr-TR\",\r\n        \"library\": {\r\n            \"name\": \"analytics.js\",\r\n            \"version\": \"4.1.8\"\r\n        },\r\n        \"campaign\": {}\r\n    },\r\n    \"integrations\": {},\r\n    \"properties\": {\r\n        \"path\": \"/uye-girisi\",\r\n        \"referrer\": \"https://www.ciceksepeti.com/dogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\",\r\n        \"search\": \"?returnUrl=%2Fdogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\",\r\n        \"title\": \"Cicek Siparisi, Online Cicek Gonder , CicekSepeti.com\",\r\n        \"url\": \"https://www.ciceksepeti.com/uye-girisi?returnUrl=%2Fdogal-ahsap-kutukte-renkli-papatya-aranjmani-at3710\"\r\n    },\r\n    \"messageId\": \"ajs-1c68f14aee666cef8c9a6e0b1dd53e3f\",\r\n    \"anonymousId\": \"9db846df-6627-4938-bdc2-b2149663312c\",\r\n    \"type\": \"page\",\r\n    \"writeKey\": \"Ejaik9iJwVBCWODcHce7alEYOwFPRbMr\",\r\n    \"userId\": null,\r\n    \"sentAt\": \"2021-11-30T11:20:22.212Z\",\r\n    \"_metadata\": {\r\n        \"bundled\": [\r\n            \"Appboy\",\r\n            \"Segment.io\"\r\n        ],\r\n        \"unbundled\": [\r\n            \"Amplitude\"\r\n        ],\r\n        \"bundledIds\": [\r\n            \"607969ffd273fe4936d63d64\"\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.data.ciceksepeti.com/v1/p",
+					"protocol": "https",
+					"host": [
+						"api",
+						"data",
+						"ciceksepeti",
+						"com"
+					],
+					"path": [
+						"v1",
+						"p"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isUserLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.success).to.eql(true);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"respond_with\": {\r\n        \"user_id\": \"0ABBDEF3-D3E8-4E9A-A081-79D8ACEF7B7A\",\r\n        \"config\": {\r\n            \"config_time\": 1617714892\r\n        }\r\n    },\r\n    \"events\": [\r\n        {\r\n            \"name\": \"set\",\r\n            \"time\": 1638272514.357,\r\n            \"data\": {\r\n                \"key\": \"available_coupons\",\r\n                \"value\": []\r\n            },\r\n            \"session_id\": \"346c94bf-0936-8a24-8c6c-2b622e35dd56\",\r\n            \"user_id\": \"0ABBDEF3-D3E8-4E9A-A081-79D8ACEF7B7A\"\r\n        }\r\n    ],\r\n    \"attributes\": [\r\n        {\r\n            \"user_id\": \"0ABBDEF3-D3E8-4E9A-A081-79D8ACEF7B7A\",\r\n            \"email\": \"kloiatest@gmail.com\",\r\n            \"first_name\": \"Test\",\r\n            \"custom\": {\r\n                \"customer_id\": \"0ABBDEF3-D3E8-4E9A-A081-79D8ACEF7B7A\",\r\n                \"phone_country_code\": null,\r\n                \"membership_type\": 1,\r\n                \"name\": \"Test \",\r\n                \"flowers_subscription_status\": 0,\r\n                \"has_active_reminder_service\": false,\r\n                \"has_registered_active_credit_card\": false,\r\n                \"opt_in_email\": true,\r\n                \"opt_in_sms\": true,\r\n                \"opt_in_phone\": true,\r\n                \"company_name\": null,\r\n                \"opt_out_parents_day_sms_email\": 0,\r\n                \"customer_class\": 0,\r\n                \"is_active\": true,\r\n                \"registration_channel\": 22,\r\n                \"receiver_country\": \"TR\",\r\n                \"currency\": \"TRY\",\r\n                \"language\": \"tr\",\r\n                \"permission_update_channel\": 1,\r\n                \"membership_plan\": \"Standard\",\r\n                \"has_wallet\": false,\r\n                \"wallet_balance\": 0\r\n            }\r\n        }\r\n    ],\r\n    \"device\": {\r\n        \"browser\": \"Chrome\",\r\n        \"browser_version\": \"96\",\r\n        \"os_version\": \"Windows\",\r\n        \"resolution\": \"1536x864\",\r\n        \"locale\": \"tr-tr\",\r\n        \"time_zone\": \"Europe/Istanbul\",\r\n        \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36\"\r\n    },\r\n    \"api_key\": \"7d69a5ff-39ce-459d-a890-6f3916d91ec1\",\r\n    \"time\": 1638272593,\r\n    \"sdk_version\": \"2.7.1\",\r\n    \"device_id\": \"87780e62-04df-c330-9e56-223b414b91b7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.data.ciceksepeti.com/v1/i",
+					"protocol": "https",
+					"host": [
+						"api",
+						"data",
+						"ciceksepeti",
+						"com"
+					],
+					"path": [
+						"v1",
+						"i"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metric_name\": \"pixel_send\",\r\n    \"pixel_code\": \"C1O13KHLRI5O97LI2SM0\",\r\n    \"platform\": 0,\r\n    \"net_type\": \"4g\",\r\n    \"app_name\": \"external\",\r\n    \"lib\": {\r\n        \"lib_version\": \"2.1.33\",\r\n        \"ttq_name\": \"ttq\"\r\n    },\r\n    \"in_iframe\": 2,\r\n    \"time_to_last_start\": 650,\r\n    \"time_to_navigation_start\": 1631,\r\n    \"latency\": 0,\r\n    \"page_url\": \"https://www.ciceksepeti.com/hesabim/kartlarim\",\r\n    \"att_status\": 3,\r\n    \"pageview_id\": \"pageId-1638273107390-8352788994322\",\r\n    \"session_id\": \"sessionId-1638270292400-2381074895160\",\r\n    \"variation_id\": \"control\",\r\n    \"ad_id\": \"undefined\",\r\n    \"creative_id\": \"undefined\",\r\n    \"partner\": \"non\",\r\n    \"ext_json\": {\r\n        \"pixel_list\": \"C1O13KHLRI5O97LI2SM0\",\r\n        \"pixel_api_conflict_flag\": false,\r\n        \"event\": \"Pageview\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://analytics.tiktok.com/api/v2/monitor",
+					"protocol": "https",
+					"host": [
+						"analytics",
+						"tiktok",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"monitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"JSON data is true\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.success).to.eql(true);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"series\": [\r\n        {\r\n            \"type\": \"Counter\",\r\n            \"metric\": \"analytics_js.integration.invoke\",\r\n            \"value\": 1,\r\n            \"tags\": {\r\n                \"method\": \"initialize\",\r\n                \"integration_name\": \"Appboy\"\r\n            }\r\n        },\r\n        {\r\n            \"type\": \"Counter\",\r\n            \"metric\": \"analytics_js.integration.invoke\",\r\n            \"value\": 1,\r\n            \"tags\": {\r\n                \"method\": \"page\",\r\n                \"integration_name\": \"Segment.io\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.data.ciceksepeti.com/v1/m",
+					"protocol": "https",
+					"host": [
+						"api",
+						"data",
+						"ciceksepeti",
+						"com"
+					],
+					"path": [
+						"v1",
+						"m"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Widget",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ApiKey\": \"ANI-AB549AA1\",\r\n    \"Identifier\": \"80e005fa-9890-4e6b-a9d1-ceeefb354cf1\",\r\n    \"WidgetName\": \"SimilarToLastVisitProducts\",\r\n    \"ProductCount\": 12,\r\n    \"CustomFilters\": {\r\n        \"AvailableRegions\": [\r\n            1500047158,\r\n            1500046918,\r\n            1500046814,\r\n            1500046760,\r\n            1500047192,\r\n            1500046494,\r\n            1500047027,\r\n            1500047147,\r\n            1500047324,\r\n            1500046737,\r\n            1500046938,\r\n            0\r\n        ]\r\n    },\r\n    \"Rule\": {\r\n        \"RuleIdentities\": [\r\n            {\r\n                \"FieldName\": \"DeliveryTypes\",\r\n                \"IdentityList\": [\r\n                    \"0\"\r\n                ]\r\n            }\r\n        ],\r\n        \"Variables\": [\r\n            {\r\n                \"Name\": \"Today\",\r\n                \"Value\": \"(Salı)\"\r\n            },\r\n            {\r\n                \"Name\": \"Tomorrow\",\r\n                \"Value\": \"(Çarşamba)\"\r\n            },\r\n            {\r\n                \"Name\": \"TimeThreshold\",\r\n                \"Value\": \"tt\"\r\n            },\r\n            {\r\n                \"Name\": \"NowTimeSpan\",\r\n                \"Value\": \"15:24:53\"\r\n            }\r\n        ]\r\n    },\r\n    \"CsCargoCampaignMinPrice\": 0,\r\n    \"PlatformType\": 2,\r\n    \"ProductCodeList\": [\r\n        \"kcm98468661-1\",\r\n        \"at3710-1\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://etwoikg3z4.execute-api.eu-west-1.amazonaws.com/ProdAni/widget",
+					"protocol": "https",
+					"host": [
+						"etwoikg3z4",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"ProdAni",
+						"widget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"JSON data is true\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.success).to.eql(true);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJ2ZXJzaW9uIjoiMS4wIiwicGFydG5lcl9uYW1lIjoiY2ljZWtzZXBldGltYWdhemFrYXlpdCIsInVzZXJfaWQiOiIxNjM4Mjc1NDEwOTE4MzM2MjZlMTExYS42YjRhMzQzYSIsImV2ZW50IjoicGFnZVZpZXciLCJpbml0X3Nlc3Npb24iOnRydWUsInNlc3Npb25faWQiOiJweHFmbzk2OS02anc1LXdyemktcXB2ei1taWozNnowMW1sZXlfMTYzODI3NTQxMSIsImRhdGUiOjE2MzgyNzU0MTEsInJlZmVycmVyIjoiaHR0cHM6Ly93d3cuY2ljZWtzZXBldGkuY29tL2d1bnVuLWZpcnNhdGkiLCJzb3VyY2UiOiJ3d3cuY2ljZWtzZXBldGkuY29tIiwiY3VycmVudF91cmwiOiJodHRwczovL3d3dy5jaWNla3NlcGV0aS5jb20vY2ljZWtzZXBldGluZGUtc2F0aXMteWFwIiwiY2FydF9hbW91bnQiOjAsInBhZ2VfdHlwZSI6Im1haW4iLCJsYW5ndWFnZSI6InRyX1RSIiwibG9jYWxlIjoidHJfVFIiLCJyZXF1ZXN0X2hhc2giOiIxNjM4Mjc1NDExNGhscGNqbm5lcyIsInVjZCI6ZmFsc2UsImNpdHkiOiJLYXN0YW1vbnUiLCJjb3VudHJ5IjoiVFIifQ=="
+				},
+				"url": {
+					"raw": "https://hit.api.useinsider.com/hit",
+					"protocol": "https",
+					"host": [
+						"hit",
+						"api",
+						"useinsider",
+						"com"
+					],
+					"path": [
+						"hit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Your country name is true\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.countrName).to.eql(\"United States\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://location.api.useinsider.com/?v=2&pId=10006119&",
+					"protocol": "https",
+					"host": [
+						"location",
+						"api",
+						"useinsider",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "2"
+						},
+						{
+							"key": "pId",
+							"value": "10006119"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ins",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ciceksepetimagazakayit.api.useinsider.com/ins.js?id=10006119",
+					"protocol": "https",
+					"host": [
+						"ciceksepetimagazakayit",
+						"api",
+						"useinsider",
+						"com"
+					],
+					"path": [
+						"ins.js"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10006119"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eitri.api.useinsider.com/static/info.js",
+					"protocol": "https",
+					"host": [
+						"eitri",
+						"api",
+						"useinsider",
+						"com"
+					],
+					"path": [
+						"static",
+						"info.js"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping Trigger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ciceksepetimagazakayit.api.useinsider.com/api/info/33.24?pa=shopping-trigger&",
+					"protocol": "https",
+					"host": [
+						"ciceksepetimagazakayit",
+						"api",
+						"useinsider",
+						"com"
+					],
+					"path": [
+						"api",
+						"info",
+						"33.24"
+					],
+					"query": [
+						{
+							"key": "pa",
+							"value": "shopping-trigger"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
