@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/37184598/144833492-c2affe41-a38e-47ac-
 
 ● Close popup
 
-## Task-1
+## Task-1 : Search product and verify result
 
 ● Verify page title is Best Buy | Official Online Store | Shop Now & Save
 
@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/37184598/144833492-c2affe41-a38e-47ac-
 
 ● Verify search results are listed for wireless earbuds
 
-## Task-2
+## Task-2 : Login with valid email and password
 
 ● Go to Sign In page
 
@@ -36,7 +36,7 @@ https://user-images.githubusercontent.com/37184598/144833492-c2affe41-a38e-47ac-
 ● Verify successful login
 
 
-## Task-3
+## Task-3 : Login with invalid email and password
 
 ● Go to Sign In page
 
