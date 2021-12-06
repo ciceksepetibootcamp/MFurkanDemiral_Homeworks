@@ -1,5 +1,3 @@
-> **25 adet test case ödevi :** https://docs.google.com/spreadsheets/d/1KDHxvW4Bp0P9m3kOkcQL3ZdPuRVwSjeIwYujntQe1-0/edit?usp=sharing 
-
 # Çiçek Sepeti Bootcamp Ödev 1
 
 >**Önemli:** config.properties dosyasını kendi bilgilerin ile düzenlemelisin.
