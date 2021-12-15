@@ -18,8 +18,8 @@
    - 2.Homework
       - [BDD Test => 3 adet senaryo](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%203/CSWeb-BDD1)
       
-- [ ] 4. Hafta 🦸 :
+- [x] 4. Hafta 🦸 :
    - 1.Homework
       - [dotNET Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/Webtekno-dotNET)
    - 2.Homework
-      - [Python Test Otomasyonu](https://www.webtekno.com/aaaaaa)
+      - [Python Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/PyTestWeb)
