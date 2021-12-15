@@ -1,12 +1,12 @@
 # Muhammet Furkan DEMİRAL
 
-- [x] 1. Hafta :tada::
+- [x] 1. Hafta 🔥:
   - 1.Homework
     - [25 Test Cases](https://docs.google.com/spreadsheets/d/1KDHxvW4Bp0P9m3kOkcQL3ZdPuRVwSjeIwYujntQe1-0/edit?usp=sharing)
   - 2.Homework
      - [2 test class x 2 test case Java Otomasyon](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%201) 
       
-- [x] 2. Hafta 🌻:
+- [x] 2. Hafta 🎉:
    - 1.Homework
       - [Performans Testi ve PageSpeed Insights medium](https://medium.com/@muhammetfurkandemiral/performans-testi-nedir-pagespeed-verileri-nas%C4%B1l-yorumlan%C4%B1r-904f6d7cf3c)
    - 2.Homework
