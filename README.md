@@ -20,6 +20,6 @@
       
 - [x] 4. Hafta 🦸 :
    - 1.Homework
-      - [dotNET Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/Webtekno-dotNET)
+      - [dotNET Core Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/Webtekno-dotNET)
    - 2.Homework
       - [Python Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/PyTestWeb)
