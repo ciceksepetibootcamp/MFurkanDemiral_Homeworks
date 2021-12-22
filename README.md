@@ -23,3 +23,9 @@
       - [dotNET Core Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/Webtekno-dotNET)
    - 2.Homework
       - [Python Test Otomasyonu](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%204/PyTestWeb)
+
+- [x] 5. Hafta ☎️ :
+   - 1.Homework
+      - [Appium POM](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%205/AppiumPOM)
+   - 2.Homework
+      - [Appium BDD](https://www.webtekno.com/404)
