@@ -28,4 +28,4 @@
    - 1.Homework
       - [Appium POM](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%205/AppiumPOM)
    - 2.Homework
-      - [Appium BDD](https://www.webtekno.com/404)
+      - [Appium BDD](https://github.com/ciceksepetibootcamp/MFurkanDemiral_Homeworks/tree/main/Week%205/AppiumBDD)
